@@ -1,0 +1,19 @@
+{
+  "name": "card-meta-edit",
+  "version": "1.0.0",
+  "description": "\n    \n    \n    \n  ",
+  "main": "card-meta-edit.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "dependencies": {
+    "polymer": "*",
+    "input-image": "*",
+    "paper-input": "polymerElements/paper-input#~1.0.18"
+  },
+  "devDependencies": {
+    "iron-test-helpers": "*",
+    "web-component-tester": "^5.0.0"
+  }
+}

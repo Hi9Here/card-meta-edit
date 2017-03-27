@@ -1,0 +1,28 @@
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../input-image/input-image.html">
+<link rel="import" href="../polymer/polymer.html">
+<!--
+  `<card-meta-edit></card-meta-edit>` Edit the metadata of a card, image title description
+  @demo demo.html
+-->
+<dom-module id="card-meta-edit">
+  <template>
+    <style>:host {display:block}</style>
+    <input-image value="[[value.image]]" style="display:inline-block;height:200px;line-height:200px;width:200px;padding:10px;" width="200" ></input-image>
+    <div style="display:inline-block">
+      <paper-input label="title" value="{{value.title}}" ></paper-input>
+      <paper-input label="desc" value="{{value.desc}}" ></paper-input>
+    </div>
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: "card-meta-edit",
+    properties:{
+      value:{
+        type:Object,
+        value:{},
+      },
+    },
+  })
+</script>
