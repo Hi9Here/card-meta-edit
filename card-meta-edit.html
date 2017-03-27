@@ -8,10 +8,10 @@
 <dom-module id="card-meta-edit">
   <template>
     <style>:host {display:block}</style>
-    <input-image value="[[value.image]]" style="display:inline-block;height:200px;width:200px;padding:10px;" width="200" ></input-image>
+    <input-image value="[[image]]" style="display:inline-block;height:200px;width:200px;padding:10px;" width="200" ></input-image>
     <div style="display:inline-block">
-      <paper-input label="title" value="{{value.title}}" ></paper-input>
-      <paper-input label="desc" value="{{value.desc}}" ></paper-input>
+      <paper-input label="title" value="{{title}}" ></paper-input>
+      <paper-input label="desc" value="{{desc}}" ></paper-input>
     </div>
   </template>
 </dom-module>
@@ -19,9 +19,17 @@
   Polymer({
     is: "card-meta-edit",
     properties:{
-      value:{
-        type:Object,
-        value:{},
+      title:{
+        type:String,
+        notify:true,
+      },
+      image:{
+        type:String,
+        notify:true,
+      },
+      desc:{
+        type:String,
+        notify:true,
       },
     },
   })
