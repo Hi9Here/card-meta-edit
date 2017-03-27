@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <title>card-meta-edit</title>
+    <script src="../../webcomponentsjs/webcomponents.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+    <script src="../../test-fixture/test-fixture-mocha.js"></script>
+    <script src="../../iron-test-helpers/mock-interactions.js"></script>
+    <link rel="import" href="../../polymer/polymer.html">
+    <link rel="import" href="../../test-fixture/test-fixture.html">
+    <link rel="import" href="../card-meta-edit.html">
+  </head>
+  <body>
+    <test-fixture id="cardMetaEdit">
+      <template>
+        <card-meta-edit></card-meta-edit> //TODO add attributes
+      </template>
+    </test-fixture>
+    <script>
+      suite('<card-meta-edit>', function () {
+        var cardMetaEdit;
+        setup(function () {
+          cardMetaEdit = fixture('cardMetaEdit');
+        });
+        teardown(function () {
+          //...
+        });
+        suite("This test is just to show that tests are running", function () {
+          test("test is running", function(done) {
+            done()
+          })
+        })
+        suite('These test allow you to interact with the element', function () {
+          test('can be triggered with space', function(done) {
+            cardMetaEdit.addEventListener('keydown', function() {
+              done()
+            })
+            MockInteractions.pressSpace(cardMetaEdit)
+          })
+          test('can be clicked', function(done) {
+            cardMetaEdit.addEventListener('click', function() {
+              done()
+            })
+            MockInteractions.tap(cardMetaEdit)
+          })
+        })
+      })
+    </script>
+  </body>
+</html>
