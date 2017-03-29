@@ -3,25 +3,23 @@
 <link rel="import" href="../input-image/input-image.html">
 <link rel="import" href="../polymer/polymer.html">
 <!--
-  `card-meta-edit` Edit the metadata of a card, image title description
-
-  @demo demo/index.html
+  `card-meta-edit` Edit the metadata of a card, image title descriptio
+  @demo
 -->
 <dom-module id="card-meta-edit">
   <template>
     <style>
-    :host {
-      display:block;
-      @apply(--layout-horizontal);
-    }
-    input-image {
-      width: 200px;
-      padding: 10px;
-    }
-    .metablocks {
-      margin: 10px;
-    }
-
+      :host {
+        display:block;
+        @apply(--layout-horizontal);
+      }
+      input-image {
+        width: 200px;
+        padding: 10px;
+      }
+      .metablocks {
+        margin: 10px;
+      }
     </style>
     <input-image id="metaimage" class="metablocks" value="{{image}}"></input-image>
     <div id="metainput" class="metablocks">
