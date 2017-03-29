@@ -1,4 +1,5 @@
 <link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-input/paper-textarea.html">
 <link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../input-image/input-image.html">
 <link rel="import" href="../polymer/polymer.html">
@@ -24,7 +25,7 @@
     <input-image class="metablocks" value="{{image}}"></input-image>
     <div id="metainput" class="metablocks">
       <paper-input label="Title" value="{{title}}"></paper-input>
-      <paper-input label="Description" value="{{desc}}"></paper-input>
+      <paper-textarea label="Description" char-counter maxlength="60" value="{{desc}}"></paper-textarea>
     </div>
   </template>
 </dom-module>
