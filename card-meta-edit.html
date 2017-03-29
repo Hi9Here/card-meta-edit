@@ -1,4 +1,5 @@
 <link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../input-image/input-image.html">
 <link rel="import" href="../polymer/polymer.html">
 <!--
@@ -10,21 +11,22 @@
   <template>
     <style>
     :host {
-      display:block
+      display:block;
+      @apply(--layout-horizontal);
     }
     input-image {
       width: 200px;
       padding: 10px;
     }
-    #metainput {
-      display: inline-block;
+    .metablocks {
+      margin: 10px;
     }
 
     </style>
-    <input-image value="{{image}}"></input-image>
-    <div id="metainput">
-      <paper-input label="title" value="{{title}}" ></paper-input>
-      <paper-input label="desc" value="{{desc}}" ></paper-input>
+    <input-image id="metaimage" class="metablocks" value="{{image}}"></input-image>
+    <div id="metainput" class="metablocks">
+      <paper-input label="Title" value="{{title}}" ></paper-input>
+      <paper-input label="Description" value="{{desc}}" ></paper-input>
     </div>
   </template>
 </dom-module>
