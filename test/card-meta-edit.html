@@ -30,10 +30,15 @@
             assert.equal(deko.is, 'card-meta-edit');
           });
 
-          // test('paper-toolbar iron-icon has a value of bookmark', function() {
-          //   var cardicon = Polymer.dom(deko.root).querySelector('iron-icon');
-          //   assert.equal(cardicon.icon, "bookmark");
-          // });
+          test('metatitle which is the title says Title', function() {
+            var cardtitle = Polymer.dom(deko.root).querySelector('#metatitle');
+            assert.equal(cardtitle.label, "Title");
+          });
+
+          test('metadesc which is the description says Description', function() {
+            var carddesc = Polymer.dom(deko.root).querySelector('#metadesc');
+            assert.equal(carddesc.label, "Description");
+          });
 
           // test('paper-toolbar has a color with a value of red', function() {
           //   var toolbr = Polymer.dom(deko.root).querySelector('paper-toolbar');
