@@ -10,7 +10,9 @@
   "dependencies": {
     "polymer": "*",
     "input-image": "*",
-    "paper-input": "polymerElements/paper-input#~1.0.18"
+    "paper-input": "polymerElements/paper-input#~1.0.18",
+    "iron-component-page": "PolymerElements/iron-component-page#^1.1.8",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.2.5"
   },
   "devDependencies": {
     "iron-test-helpers": "*",
