@@ -31,12 +31,12 @@
           });
 
           test('metatitle which is the title says Title', function() {
-            var cardtitle = Polymer.dom(deko.root).querySelector('#metatitle');
+            var cardtitle = Polymer.dom(deko.root).querySelector('paper-input');
             assert.equal(cardtitle.label, "Title");
           });
 
           test('metadesc which is the description says Description', function() {
-            var carddesc = Polymer.dom(deko.root).querySelector('#metadesc');
+            var carddesc = Polymer.dom(deko.root).querySelector('paper-textarea');
             assert.equal(carddesc.label, "Description");
           });
 
