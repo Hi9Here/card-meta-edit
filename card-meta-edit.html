@@ -2,14 +2,27 @@
 <link rel="import" href="../input-image/input-image.html">
 <link rel="import" href="../polymer/polymer.html">
 <!--
-  `<card-meta-edit></card-meta-edit>` Edit the metadata of a card, image title description
-  @demo demo.html
+  `card-meta-edit` Edit the metadata of a card, image title description
+
+  @demo demo/index.html
 -->
 <dom-module id="card-meta-edit">
   <template>
-    <style>:host {display:block}</style>
-    <input-image value="{{image}}" style="display:inline-block;width:200px;padding:10px" width="200" ></input-image>
-    <div style="display:inline-block">
+    <style>
+    :host {
+      display:block
+    }
+    input-image {
+      width: 200px;
+      padding: 10px;
+    }
+    #metainput {
+      display: inline-block;
+    }
+
+    </style>
+    <input-image value="{{image}}"></input-image>
+    <div id="metainput">
       <paper-input label="title" value="{{title}}" ></paper-input>
       <paper-input label="desc" value="{{desc}}" ></paper-input>
     </div>
@@ -20,14 +33,17 @@
     is: "card-meta-edit",
     properties:{
       title:{
+        // Title of the Card
         type:String,
         notify:true,
       },
       image:{
+        // Image of the Card
         type:String,
         notify:true,
       },
       desc:{
+        // Desciption of the Card
         type:String,
         notify:true,
       },
