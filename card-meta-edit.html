@@ -13,13 +13,17 @@
       :host {
         display:block;
         @apply(--layout-horizontal);
+        @apply(--layout-center-justified);
+        @apply(--layout-wrap);
       }
       input-image {
         width: 200px;
         padding: 10px;
+        text-align: center;
       }
       .metablocks {
         margin: 10px;
+        width: 300px;
       }
     </style>
     <input-image class="metablocks" value="{{image}}"></input-image>
