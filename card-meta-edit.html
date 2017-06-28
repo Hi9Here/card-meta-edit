@@ -44,32 +44,22 @@
         // Title of the Card
         type:String,
         notify:true,
-        observer: '_go',
       },
       bigImage:{
         // Image of the Big Card
         type:String,
         notify:true,
-        observer: '_go',
       },
       image:{
         // Image of the Card
         type:String,
         notify:true,
-        observer: '_go',
       },
       desc:{
         // Desciption of the Card
         type:String,
         notify:true,
-        observer: '_go',
-      },
-      go: {
-        notify:true,
       },
     },
-    _go: function(){
-      this.go = !this.go
-    } 
   })
 </script>
