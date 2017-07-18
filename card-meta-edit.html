@@ -27,7 +27,7 @@
         width: 300px;
       }
     </style>
-    <input-image gps="{{gps}}" cam-make="{{make}}" cam-model="{{model}}" log label="image" class="metablocks" value="{{bigImage}}" width="500" set-width="500" max-width="500" max-height="500"></input-image>
+    <input-image gps="{{gps}}" cam-make="{{make}}" cam-model="{{model}}" exif="{{exif}}" log label="image" class="metablocks" value="{{bigImage}}" width="500" set-width="500" max-width="500" max-height="500"></input-image>
     <image-base64 url="[[bigImage]]" width="250" max-height="250" max-width="250" base64="{{image}}"></image-base64>
     
     <div id="metainput" class="metablocks">
@@ -61,6 +61,9 @@
         type:String,
         notify:true,
       },
+      exif:{
+        notify:true,
+      }
     },
   })
 </script>
