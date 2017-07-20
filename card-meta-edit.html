@@ -30,7 +30,10 @@
     </style>
     <input-image gps="{{gps}}" cam-make="{{make}}" cam-model="{{model}}" exif="{{exif}}" log label="image" class="metablocks" value="{{bigImage}}" width="500" set-width="500" max-width="500" max-height="500"></input-image>
     <image-base64 url="[[bigImage]]" width="250" max-height="250" max-width="250" base64="{{image}}"></image-base64>
-    <!-- marcus7777/browser-location -->
+    
+    <browser-location latitude="{{latitude}}" longitude="{{longitude}}"></browser-location>
+    <location-picker  latitude="{{latitude}}" longitude="{{longitude}}"></location-picker>
+    
     <div id="metainput" class="metablocks">
       <paper-input label="Title" value="{{title}}"></paper-input>
       <paper-textarea label="Description" char-counter maxlength="60" value="{{desc}}"></paper-textarea>
@@ -64,7 +67,13 @@
       },
       exif:{
         notify:true,
-      }
+      },
+      latitude:{
+        notify:true,
+      },
+      longitude:{
+        notify:true,
+      },
     },
   })
 </script>
