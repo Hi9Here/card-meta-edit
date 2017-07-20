@@ -1,5 +1,6 @@
 <link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../browser-location/browser-location.html">
+<link rel="import" href="../switchable-block/switchable-block.html">
 <link rel="import" href="../location-picker/location-picker.html">
 <link rel="import" href="../paper-input/paper-textarea.html">
 <link rel="import" href="../image-base64/image-base64.html">
@@ -37,10 +38,10 @@
       <paper-textarea label="tags" value="{{tags}}"></paper-textarea>
       <paper-textarea label="Description" char-counter maxlength="60" value="{{desc}}"></paper-textarea>
     </div>
-    <div class="metablocks">
+    <switchable-block class="metablocks">
       <location-picker  latitude="{{latitude}}" longitude="{{longitude}}"></location-picker>
       <browser-location latitude="{{latitude}}" longitude="{{longitude}}"></browser-location>
-    </div>
+    </switchable-block>
   </template>
 </dom-module>
 
