@@ -12,6 +12,7 @@
     "browser-location": "marcus7777/browser-location",
     "location-picker": "marcus7777/location-picker",
     "input-image": "marcus7777/input-image",
+    "switchable-block":"marcus7777/switchable-block",
     "paper-input": "polymerElements/paper-input#~1.0.18",
     "iron-component-page": "PolymerElements/iron-component-page#^1.1.8",
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.2.5"
