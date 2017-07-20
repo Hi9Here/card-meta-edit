@@ -1,14 +1,15 @@
 {
   "name": "card-meta-edit",
   "version": "1.0.0",
-  "description": "\n    \n    \n    \n  ",
+  "description": "Get data needed to display in dek",
   "main": "card-meta-edit.html",
   "keywords": [
     "polymer",
     "web-components"
   ],
   "dependencies": {
-    "polymer": "*",
+    "polymer": "^1.9.1",
+    "browser-location": "marcus7777/browser-location",
     "input-image": "*",
     "paper-input": "polymerElements/paper-input#~1.0.18",
     "iron-component-page": "PolymerElements/iron-component-page#^1.1.8",
