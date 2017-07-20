@@ -39,7 +39,7 @@
       <paper-textarea label="Description" char-counter maxlength="60" value="{{desc}}"></paper-textarea>
     </div>
     <div class="metablocks"> add a location
-      <switchable-block opened="[[latitude]]">
+      <switchable-block opened="{{location}}">
         <location-picker  latitude="{{latitude}}" longitude="{{longitude}}"></location-picker>
         <browser-location latitude="{{latitude}}" longitude="{{longitude}}"></browser-location>
       </switchable-block>
