@@ -45,7 +45,7 @@
         <location-picker zoom="{{mapZoom}}" latitude="{{latitude}}" longitude="{{longitude}}"></location-picker>
         <browser-location latitude="{{latitude}}" longitude="{{longitude}}"></browser-location>
         <template is="dom-if" if={{gps}}>
-          <paper-button on-tap="gpsFromImage">From Image</paper-button>
+          <paper-button on-tap="gpsFromImage">at Image</paper-button>
         </template>
       </switchable-block>
     </div>
@@ -84,6 +84,9 @@
         notify:true,
       },
       longitude:{
+        notify:true,
+      },
+      mapZoom:{
         notify:true,
       },
       tags:{
