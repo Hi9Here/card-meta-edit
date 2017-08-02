@@ -32,8 +32,9 @@
       }
     </style>
     <input-image gps="{{gps}}" cam-make="{{make}}" cam-model="{{model}}" exif="{{exif}}" log label="image" class="metablocks" value="{{bigImage}}" width="500" set-width="500" max-width="500" max-height="500"></input-image>
-    <image-base64 url="[[bigImage]]" width="250" max-height="250" max-width="250" base64="{{image}}"></image-base64>
-    
+    <template is="dom-if" if="[[_big]]">
+      <image-base64 url="[[bigImage]]" width="250" max-height="250" max-width="250" base64="{{image}}"></image-base64>
+    </template>
     <div class="metablocks">
       <paper-input label="Title" value="{{title}}"></paper-input>
       <paper-textarea label="tags" value="{{tags}}"></paper-textarea>
@@ -64,6 +65,7 @@
         // Image of the Big Card
         type:String,
         notify:true,
+        observer: '_outputImage',
       },
       image:{
         // Image of the Card
@@ -96,6 +98,14 @@
         this.latitude = this.gps.split(",")[0]
         this.longitude = this.gps.split(",")[1]
       }
+    },
+    _outputImage: function(bigImage) {
+      var that = this
+      this.debounce("set_big",
+        function() {
+          that._big = that.bigImage
+        }
+      , 750)
     },
   })
 </script>
