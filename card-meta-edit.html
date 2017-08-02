@@ -4,6 +4,7 @@
 <link rel="import" href="../location-picker/location-picker.html">
 <link rel="import" href="../paper-input/paper-textarea.html">
 <link rel="import" href="../image-base64/image-base64.html">
+<link rel="import" href="../paper-button/paper-button.html">
 <link rel="import" href="../paper-input/paper-input.html">
 <link rel="import" href="../input-image/input-image.html">
 <link rel="import" href="../polymer/polymer.html">
@@ -40,8 +41,11 @@
     </div>
     <div class="metablocks"> add a location
       <switchable-block opened="{{location}}">
-        <location-picker  latitude="{{latitude}}" longitude="{{longitude}}"></location-picker>
+        <location-picker zoom="{{mapZoom}}" latitude="{{latitude}}" longitude="{{longitude}}"></location-picker>
         <browser-location latitude="{{latitude}}" longitude="{{longitude}}"></browser-location>
+        <template is="dom-if" if={{gps}}>
+          <paper-button on-tap="press">GPS from image</paper-button>
+        </template>
       </switchable-block>
     </div>
   </template>
