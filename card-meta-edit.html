@@ -89,7 +89,7 @@
       },
       geoHash:{
         notify:true,
-        computed: "encodeGeoHash(latitude,longitude) "
+        computed: "encodeGeoHash(latitude, longitude, mapZoom) "
       },
       mapZoom:{
         notify:true,
@@ -101,8 +101,29 @@
         notify:true,
       }
     },
-    encodeGeoHash(latitude, longitude) {
-      return encodeGeoHash(latitude, longitude) 
+    encodeGeoHash(latitude, longitude, mapZoom) {
+      var saveSize = 9
+      switch(mapZoom) {
+        case < 17:
+          saveSize = 8
+        case < 16:
+          saveSize = 8
+        case < 15:
+          saveSize = 7
+        case < 13:
+          saveSize = 6
+        case < 11:
+          saveSize = 5
+        case < 7:
+          saveSize = 5
+        case < 6:
+          saveSize = 4
+        case < 4:
+          saveSize = 3
+        case < 3:
+          saveSize = 2
+      }
+      return encodeGeoHash(latitude, longitude).substring(0,saveSize)
     },
     gpsFromImage: function(){
       if (this.gps.split(",")[1]) {
