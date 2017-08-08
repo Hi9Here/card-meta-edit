@@ -86,6 +86,9 @@
       longitude:{
         notify:true,
       },
+      geoHash:{
+        notify:true,
+      },
       mapZoom:{
         notify:true,
       },
@@ -96,7 +99,7 @@
         notify:true,
       }
     },
-    gpsFromImage:function(){
+    gpsFromImage: function(){
       if (this.gps.split(",")[1]) {
         this.latitude = this.gps.split(",")[0]
         this.longitude = this.gps.split(",")[1]
