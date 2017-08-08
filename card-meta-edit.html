@@ -104,8 +104,6 @@
     encodeGeoHash(latitude, longitude, mapZoom) {
       var saveSize = 9
       switch(mapZoom) {
-        case < 17:
-          saveSize = 8
         case < 16:
           saveSize = 8
         case < 15:
