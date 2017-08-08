@@ -103,23 +103,26 @@
     },
     encodeGeoHash(latitude, longitude, mapZoom) {
       var saveSize = 9
-      switch(mapZoom) {
-        case < 16:
-          saveSize = 8
-        case < 15:
-          saveSize = 7
-        case < 13:
-          saveSize = 6
-        case < 11:
-          saveSize = 5
-        case < 7:
-          saveSize = 5
-        case < 6:
-          saveSize = 4
-        case < 4:
-          saveSize = 3
-        case < 3:
-          saveSize = 2
+      if (mapZoom < 16) {
+        saveSize = 8
+      }
+      if (mapZoom < 15) {
+        saveSize = 7
+      }
+      if (mapZoom < 13) {
+        saveSize = 6
+      }
+      if (mapZoom < 11) {
+        saveSize = 5
+      }
+      if (mapZoom < 7) {
+        saveSize = 4
+      }
+      if (mapZoom < 4) {
+        saveSize = 3
+      }
+      if (mapZoom < 3) {
+        saveSize = 2
       }
       return encodeGeoHash(latitude, longitude).substring(0,saveSize)
     },
