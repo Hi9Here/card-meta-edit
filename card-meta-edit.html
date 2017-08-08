@@ -89,6 +89,7 @@
       },
       geoHash:{
         notify:true,
+        computed: "encodeGeoHash(latitude,longitude) "
       },
       mapZoom:{
         notify:true,
@@ -99,6 +100,9 @@
       gps:{
         notify:true,
       }
+    },
+    encodeGeoHash(latitude, longitude) {
+      return encodeGeoHash(latitude, longitude) 
     },
     gpsFromImage: function(){
       if (this.gps.split(",")[1]) {
