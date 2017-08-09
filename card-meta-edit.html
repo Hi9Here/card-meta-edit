@@ -43,7 +43,7 @@
     </div>
     <div class="metablocks"> add a location
       <switchable-block opened="{{location}}">
-        <location-picker map-zoom="{{mapZoom}}" latitude="{{latitude}}" longitude="{{longitude}}"></location-picker>
+        <location-picker geo-hash="{{geoHash}}" latitude="[[latitude]]" longitude="[[longitude]]"></location-picker>
         <browser-location latitude="{{latitude}}" longitude="{{longitude}}"></browser-location>
         <template is="dom-if" if={{gps}}>
           <paper-button on-tap="gpsFromImage">at Image</paper-button>
@@ -81,17 +81,7 @@
       exif:{
         notify:true,
       },
-      latitude:{
-        notify:true,
-      },
-      longitude:{
-        notify:true,
-      },
       geoHash:{
-        notify:true,
-        computed: "encodeGeoHash(latitude, longitude, mapZoom) "
-      },
-      mapZoom:{
         notify:true,
       },
       tags:{
@@ -100,31 +90,6 @@
       gps:{
         notify:true,
       }
-    },
-    encodeGeoHash(latitude, longitude, mapZoom) {
-      var saveSize = 9
-      if (mapZoom < 16) {
-        saveSize = 8
-      }
-      if (mapZoom < 15) {
-        saveSize = 7
-      }
-      if (mapZoom < 13) {
-        saveSize = 6
-      }
-      if (mapZoom < 11) {
-        saveSize = 5
-      }
-      if (mapZoom < 7) {
-        saveSize = 4
-      }
-      if (mapZoom < 4) {
-        saveSize = 3
-      }
-      if (mapZoom < 3) {
-        saveSize = 2
-      }
-      return encodeGeoHash(latitude, longitude).substring(0,saveSize)
     },
     gpsFromImage: function(){
       if (this.gps.split(",")[1]) {
