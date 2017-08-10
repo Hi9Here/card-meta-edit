@@ -89,6 +89,17 @@
       },
       gps:{
         notify:true,
+      },
+      location:{
+        observer: 'picklocation',
+      },
+    },
+    picklocation: function(){
+      if ( this.latitude && this.longitude){
+        this.pickedLatitude = 0
+        this.pickedLongitude = 0
+        this.pickedLatitude = this.latitude
+        this.pickedLongitude = this.longitude
       }
     },
     gpsFromImage: function(){
