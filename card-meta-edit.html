@@ -93,6 +93,8 @@
     },
     gpsFromImage: function(){
       if (this.gps.split(",")[1]) {
+        this.pickedLatitude = 0
+        this.pickedLongitude = 0
         this.pickedLatitude = this.gps.split(",")[0]
         this.pickedLongitude = this.gps.split(",")[1]
       }
