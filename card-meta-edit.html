@@ -43,7 +43,7 @@
     </div>
     <div class="metablocks"> add a location
       <switchable-block opened="{{location}}">
-        <location-picker geo-hash="{{geoHash}}" latitude="[[latitude]]" longitude="[[longitude]]"></location-picker>
+        <location-picker geo-hash="{{geoHash}}" pick-latitude="[[latitude]]" pick-longitude="[[longitude]]"></location-picker>
         <browser-location latitude="{{latitude}}" longitude="{{longitude}}"></browser-location>
         <template is="dom-if" if={{gps}}>
           <paper-button on-tap="gpsFromImage">at Image</paper-button>
