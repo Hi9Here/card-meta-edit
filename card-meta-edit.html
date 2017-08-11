@@ -42,7 +42,7 @@
       <paper-textarea label="Description" char-counter maxlength="60" value="{{desc}}"></paper-textarea>
     </div>
     <div class="metablocks"> add a location
-      <switchable-block opened="{{location}}">
+      <switchable-block open="{{location}}">
         <location-picker geo-hash="{{geoHash}}" pick-latitude="[[pickedLatitude]]" pick-longitude="[[pickedLongitude]]" latitude="[[latitude]]" longitude="[[longitude]]"></location-picker>
         <browser-location latitude="{{pickedLatitude}}" longitude="{{pickedLongitude}}"></browser-location>
         <template is="dom-if" if={{gps}}>
